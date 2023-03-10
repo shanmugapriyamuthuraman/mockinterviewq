@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+ <html>
+	<head> 
+		<meta charset="UTF-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>round2</title>
+		<style>
+			
+			.child1{
+				display:flex;
+				width:80%;
+				margin:auto;
+			}
+			
+			.child2{
+				width:50%;
+			}
+			.child2 h3{
+				text-align:center;
+				padding-top:3rem;
+				color:#808B96;
+			}
+			.child2{
+				text-align:center;
+			}
+			.child2 input{
+				text-align:center;
+				padding:1rem;
+			}
+			.but button{
+				background-color:#52BE80 ;
+				margin-top:2rem;
+				border:none;
+				color:white;
+				padding:1rem 11.2rem 1rem 11.2rem;
+				cursor:pointer;
+			}
+			h4{
+				color:#808B96;
+			}
+			.btn1{
+				
+				margin-top:5rem;
+			}
+			.btn1 button{
+				padding:0.7rem;
+				border:1px solid black;
+				background-color:white;
+				color:black;
+				}
+		</style>
+	</head>
+	
+	<body>
+		<div class="main">
+			<div class="child1">
+				<div class="child2">
+					<img src="img.jpg" width="100%" height="500vh">
+				</div>
+				<div class="child2">
+					<h3>ACCOUNT LOGIN
+					</h3>
+					
+					
+					<input id="username" type="text" placeholder="User name">
+					<span id="para"></span>
+				
+			
+					<input id="password" type="text" placeholder="Password">
+					<span id="para1"></span>
+					
+					
+					<div class="but">
+						<button onClick="loginin()" id="btn">SIGN IN</button>
+					<div>
+					<h4>Forget User name/password?</h4>
+				</div>
+				<div class="btn1">
+					<button id="end">SIGN UP</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			function loginin(){
+				let input1=document.getElementById("username").value;
+				let input2=document.getElementById("password").value;
+				let para1=document.getElementById("para");
+				let para2=document.getElementById("para1")
+				if(input1==""&&input2==""){
+					para1.innerHTML="please enter your username";
+					para2.innerHTML="please enter your password";
+					para1.style.color="red";
+					para2.style.color="red";
+					
+				}
+				else if(input1==""){
+					para1.innerHtml="please enter your username";
+					para1.style.color="red";
+				}
+				else if(input2==""){
+					para2.innerHTML="please enter your password"
+					para2.style.color="red";
+				}
+				else if(input1!==""&&input2!==""){
+					window.location=""
+				}
+			}
+		</script>
+	</body>
+</html>	
